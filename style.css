@@ -1,0 +1,179 @@
+:root {
+  --bg: #ffffff;
+  --card: #f8f8f8;
+  --muted: #666666;
+  --text: #1a1a1a;
+  --primary: #0055ff;
+  --accent: #ff6b35;
+  --border-color: rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 10;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+.logo {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+}
+.menu {
+  display: flex;
+  gap: 14px;
+}
+.menu a {
+  color: var(--muted);
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.menu a:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text);
+}
+
+/* Hero */
+.hero {
+  padding: 80px 0 60px;
+  background: linear-gradient(135deg, var(--primary), #0033aa);
+  color: white;
+}
+.hero-grid {
+  display: grid;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.hero h1 {
+  font-size: clamp(32px, 4vw, 48px);
+  margin: 0 0 12px;
+}
+.hero .lead {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+.hero .hero-mockup {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #ff854f;
+  transform: translateY(-2px);
+}
+.btn.secondary {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Sections */
+.section {
+  padding: 60px 0;
+}
+.section-alt {
+  background: #f5f7fa;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+h2 {
+  text-align: center;
+  font-size: clamp(24px, 3.5vw, 32px);
+  margin-bottom: 30px;
+}
+.grid-2, .grid-3 {
+  display: grid;
+  gap: 24px;
+}
+@media (min-width:720px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Team */
+.team .icon {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  background: var(--primary);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+.footer a {
+  color: #ffbd59;
+}
